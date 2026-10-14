@@ -1,10 +1,30 @@
 {
-  "name": "Not painted yet",
-  "image": "https://api.imd.fun/artifacts/ce5dbc18003365f5a1bf9014a2a357c2cb5c5dc2335dd0eb9b661ae703d36308",
+  "name": "Look Again Together",
+  "image": "https://api.imd.fun/artifacts/79c12fa2c03d587d5aa0367412946c5662d498e40ef1837973f8c33ee705d9dc",
   "attributes": [
     {
       "trait_type": "Cave",
       "value": "Water"
+    },
+    {
+      "trait_type": "Wall",
+      "value": "Gathering"
+    },
+    {
+      "trait_type": "Number",
+      "value": 6
+    },
+    {
+      "trait_type": "Left behind",
+      "value": "Paired payment recheck and captured request binding"
+    },
+    {
+      "trait_type": "Meaning",
+      "value": "A small ochre Pepe returns to look again before both witnesses trust the payment."
+    },
+    {
+      "trait_type": "One thing",
+      "value": "Gathering"
     }
   ]
 }

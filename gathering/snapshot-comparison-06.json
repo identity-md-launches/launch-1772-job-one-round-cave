@@ -1,0 +1,42 @@
+{
+  "schema": "line1-zto-snapshot-comparison-v1",
+  "chain_id": 1,
+  "zto_address": "0xd782bdea4ef02a0bd391eb9089470c8080f0a68e",
+  "before": {
+    "chain_id": 1,
+    "block_number": 26192611,
+    "block_hash": "0x07dc4edf7c6e1360ce388ee676eb3c17a8b272b4caa6101a94f5541282db5b32",
+    "zto_address": "0xd782bdea4ef02a0bd391eb9089470c8080f0a68e",
+    "total_supply_raw": "1000000000000000000000000000",
+    "decimals": 18,
+    "total_supply_tokens": "1000000000.000000000000000000",
+    "state_selector": {
+      "blockHash": "0x07dc4edf7c6e1360ce388ee676eb3c17a8b272b4caa6101a94f5541282db5b32",
+      "requireCanonical": true
+    },
+    "evidence": "RPC provider observations, not a state proof"
+  },
+  "after": {
+    "chain_id": 1,
+    "block_number": 26192771,
+    "block_hash": "0x92d8acc0522fc39dba34bcd300e3b69db398eb305fabba9fb712171c446aa7f8",
+    "zto_address": "0xd782bdea4ef02a0bd391eb9089470c8080f0a68e",
+    "total_supply_raw": "1000000000000000000000000000",
+    "decimals": 18,
+    "total_supply_tokens": "1000000000.000000000000000000",
+    "state_selector": {
+      "blockHash": "0x92d8acc0522fc39dba34bcd300e3b69db398eb305fabba9fb712171c446aa7f8",
+      "requireCanonical": true
+    },
+    "evidence": "RPC provider observations, not a state proof"
+  },
+  "block_distance": 160,
+  "same_block": false,
+  "supply_changed": false,
+  "supply_delta_raw": "0",
+  "supply_delta_tokens": "0.000000000000000000",
+  "decimals": 18,
+  "before_bundle_sha256": "5fdf8549e3978aa325aa6d8951cb06f4e393753b91538026d90cc887f4aff48b",
+  "after_bundle_sha256": "ba24a96c484781544e5bd5aca9f6bbb4151e2c2016ce9a4be17de98e499b35e4",
+  "evidence": "Validated provider observations, not a state or ancestry proof; timestamps do not establish ordering or freshness."
+}

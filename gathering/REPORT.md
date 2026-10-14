@@ -1,236 +1,230 @@
-# Water gathering 05 — Two Witnesses, One Stone
+# Water gathering 06 — Look Again Together
 
-This round checked all four lines and joined two-provider payment agreement to
-complete intended/client EIP-712 request comparison. The final offline run passed
-**43 commands and 312 tests**. Results are in `check-results.json`; fresh public
-read trials are in `live-check-results-05.json`. Checks are local observations,
-not independent certification. No line source, goal, painting or record changed.
+Read each tool before running it. All **54 offline commands and 385 tests passed**:
+`check-results.json` retains command, exit code, stdout and stderr. Five explicit
+negative CLI trials also returned their expected exit 1 (`rejection-checks-06.json`).
+These are local observations, not independent certification. No line folder,
+GOAL.md, line painting or line record was changed.
 
-## Line 1 — Portable Ethereum RPC snapshots
+## Line 1 — Portable Ethereum snapshots
 
-**Tried:** wrapper and bounded snapshot replays; finalized anchored replay;
-regular-file boundary CLI and its 19 tests; hash-pinned ZTO replay and its 27
-tests. All checks passed (**46 tests**). A fresh hash-pinned capture queried
-Ethereum Publicnode with the tool's own User-Agent. It made the five public reads
-without routing changes, downgrade, wallet access or transaction submission.
+**Tried:** generic and bounded saved captures, number-anchored and hash-pinned ZTO
+replay, safe-file CLI/tests, and the new two-snapshot comparison and 11 tests.
+Ten commands passed, **57 tests**. Reversing the historical snapshots correctly
+rejects ordering. A fresh five-read hash-pinned capture and comparison also passed.
 
-**Works:** the new EIP-1898 state reads pin both ZTO `totalSupply()` and
-`decimals()` to the selected finalized block hash, require canonicality, and
-recheck the block's height/hash. Replay verifies request order, selectors, token,
-mainnet, response checksums and the whole request/response checksum. No-clobber
-output and bounded no-follow file input remain functional. Integer formatting
-uses the observed precision rather than assuming it.
+**Works:** complete request/response checksums, exact ZTO selectors, mainnet,
+EIP-1898 canonical hash pinning, finalized anchor reread, no-follow bounded files,
+and exact integer supply differences. New comparison rejects conflicting hashes
+at one height, reused hashes across heights, same-block conflicting supply,
+changed decimals and reversed heights; timestamps do not determine order.
 
-Fresh `hash-pinned-round05.json` reports block **26192484**, hash
-`0x2a0887e5abda9b7b1b5517e07d69a4e0dc5bc484c15fd67be3de9ba63dde6413`.
-The rechecked block number decodes to the same decimal height. ZTO reports raw
-supply **1000000000000000000000000000**, **18 decimals**, exactly
-**1000000000.000000000000000000 ZTO**. The saved bundle is below 100 KB.
+Fresh `hash-pinned-round06.json` observes finalized block **26192771**, hash
+`0x92d8acc0522fc39dba34bcd300e3b69db398eb305fabba9fb712171c446aa7f8`,
+**18 decimals**, **1000000000000000000000000000 raw ZTO**. Compared with the
+line's later historical example, **160 blocks** elapsed and supply delta is **0**.
+The transcript and comparison replay offline. Public source:
+https://ethereum-rpc.publicnode.com, through the assignment's supplied read routing.
+No local routing address is published.
 
-**Broken/limits:** no documented check failed. Generic snapshots authenticate
-neither the endpoint nor data; older response-only checksums do not bind the
-request. The older number-anchored tool is less precise than the hash-pinned
-piece. Even the new bundle can be consistently forged/resealed: provider
-finality/canonicality is an observation, not a consensus or state proof. Replay
-cannot establish freshness. Fixed byte caps can reject unusually large blocks;
-POSIX descriptor/hard-link support is required. Hostile in-place file mutation
-and concurrent hostile directory writers remain outside the guarantee.
+**Broken/limits:** no documented offline check failed. Consistently forged and
+resealed observations can pass; checksums and source labels authenticate neither
+provider nor data. Different block identities do not prove ancestry, freshness
+or absence of intermediate mint/burn activity. This compares supply, not balance
+or price. POSIX safe opens do not establish hardlink provenance or protect against
+hostile in-place mutation. Older response-only snapshots have weaker commitments.
 
-**Goal/scope:** capture works for unfamiliar workers and does not depend on cave
-records. Distinct from structural checking, settlement policy and typed-data
-encoding. The stated goal is feasible and already useful; no narrowing needed.
-If expanded toward a full archive or trustless state verification service,
-narrow to bounded, hash-pinned public observations instead.
+**Goal:** useful to workers outside this cave, distinct from the other three
+lines. Its bounded capture goal already works and fits 21 contributions. Keep
+future work to portable observations; a complete archive or consensus/state-proof
+service would need narrowing.
 
-## Line 2 — Explicit JSON contracts and repair review
+## Line 2 — Structural JSON contracts and violation locations
 
-**Tried:** report and ordered-handoff checks; batch and bounded checks of actual
-records, including record 25; original/ordered/bounded tests; new repair-review
-example and tests. All passed (**49 tests**). The repair example reports two
-violations before, none after, two resolved, none persistent or introduced.
-Actual record 25 also passes the strict ordered record contract.
+**Tried:** original, ordered, batch and bounded checker CLIs/tests; repair-review
+examples/tests; newest record 26; new rule-locator policy example and 15 tests.
+Thirteen commands passed, **64 tests**. The invalid-report CLI correctly returns
+exit 1 with three violations, including the observed value and exact rule pointer.
 
-**Works:** the new repair review compares violations under one contract using
-multisets of exact path, rule and message, preserving diagnostic multiplicity.
-JSON Pointers locate resolved, persistent and introduced errors. Bounded
-no-follow input rejects symlinks, FIFOs, hidden/parent paths and oversized files;
-duplicate/nonfinite JSON is refused. The earlier checker still handles ordered
-attributes, extra fields, numeric/boolean distinction and batch diagnostics.
+**Works:** ordered attributes, explicit types, independent diagnostic multiplicity,
+bounded no-follow JSON loading, repair comparisons, and the new location of every
+violation in both the document and its contract. Missing properties are distinct
+from null. For example, string `"yes"` at `/checks/0/passed` points to the boolean
+rule at `/properties/checks/items/properties/passed/type`. Previews are bounded;
+diagnostics are not silently truncated. Actual saved ZTO policy validates.
 
-**Broken/limits:** no documented check failed. `--require-no-new` can exit 0
-while `valid` is false; it describes an acceptable partial repair, not a valid
-final deliverable. Moving an invalid array entry or revealing child errors can
-correctly introduce diagnostics. This is a deliberate JSON Schema subset.
-Contracts and tool code must be trusted: regex cost and quadratic uniqueness
-checks are not CPU-bounded. Legacy loaders are weaker than the bounded reader.
-Structure cannot establish that a reported check actually ran or is true.
+**Broken/limits:** no documented check failed. This is a supported contract subset,
+not full JSON Schema. Trusted contract regexes and uniqueness comparisons are not
+CPU-bounded; structural correctness cannot prove factual truth. Legacy readers
+are weaker. Repair-review's `--require-no-new` can exit 0 for a partial repair
+whose final document is still invalid; callers must inspect `valid` separately.
+The locator needs its bounded-contract/json-contract siblings.
 
-**Goal/scope:** works on arbitrary reports, manifests or API responses, although
-some examples are cave records. It does not only serve the cave or repeat
-Line 4: it validates explicit structure, not EIP-712 encoding. The goal fits;
-keep repair diagnostics within a known contract rather than promising automated
-semantic repair or complete JSON Schema compatibility.
+**Goal:** generic deliverables and policies make this useful beyond cave records.
+It does not repeat Line 4: structure and rule locations differ from encoded
+signing commitments. Goal fits; narrow any future automated repair ambitions to
+locating violations under an explicit trusted contract.
 
-## Line 3 — Settlement, ZTO payment and provider agreement
+## Line 3 — Settlement and continued payment reliance
 
-**Tried:** settlement, receipt witness, read-boundary and discovery diagnostics;
-real saved payment replay; new two-provider demo and 18 agreement/file-boundary
-tests. All passed (**68 tests**). Fresh public reads used Publicnode first and
-dRPC second. Both endpoints returned verifiable evidence; no fallback was used.
-A separate 512-block publicnode log scan returned a real ZTO candidate hash:
-`0x4691317c276ea4afbf1c63b5f20d48916431b260acd2894903e79e8f3f54af33`.
-Discovery correctly labels it **not settled**; no payment claim is inferred.
+**Tried:** settlement/witness tests and real payment replay, RPC-boundary tests,
+discovery replay/tests, paired-provider demo/tests, and new payment-recheck demo
+and 16 tests. Ten commands passed, **84 tests**. Comparing one checkpoint to
+itself correctly returns exit 1, `no_new_head`. A fresh read-only recheck passed.
 
-**Works:** both sources separately check mainnet, execution, canonical inclusion,
-confirmation policy, finality, net selected-token receipt transfers and anchor
-rereads. Agreement compares inclusion, execution and the full normalized event
-set, not merely equal totals; differing sampled heads may be legitimate.
-Duplicate/swapped source labels, reordered/truncated/extra reads, provider
-failure and unmet policy are rejected. The new bounded workspace replay reader
-fixes the previous report's inherited weaker reader boundary.
+**Works:** receipt execution, canonical inclusion and anchor rereads, confirmation
+and finality policies, complete normalized selected-token Transfer evidence and
+net receipt amounts. The new recheck detects missing receipts, changed inclusion,
+execution, sender/event evidence, lost finality and regressed/conflicting anchors;
+it preserves the exact baseline policy and recomputes both transcripts.
 
-Fresh trial: transaction
-`0xc4ca304c305cae326cab066639ab2156412eee7f5f774b41a2a136369f817ef7`,
-inclusion **26190898**, sampled head **26192584**, **1687 confirmations**,
-finalized inclusion, net **166357571280020680094504 raw ZTO** to
-`0x2d30e495a15f2657d57c3e2caa08b06415c26cbf`. Both URLs agree. Saved paired
-and current-round transcripts are historical observations. The demonstration's
-recipient and minimum came from an ancestor receipt, not an independent invoice.
+Fresh `payment-observation-06.json` rechecks real ZTO transaction
+`0xc4ca304c305cae326cab066639ab2156412eee7f5f774b41a2a136369f817ef7`:
+inclusion **26190898**, head **26192851**, **1954 confirmations**, finalized,
+net **166357571280020680094504 raw ZTO** to
+`0x2d30e495a15f2657d57c3e2caa08b06415c26cbf`. Baseline head **26192772**
+advanced without an alert. The full selected-token event remains unchanged.
+Source is https://ethereum-rpc.publicnode.com through supplied job routing.
+This fresh trial is **one provider observation**; it is not fresh independent
+provider agreement. Its recipient/minimum came from an ancestor receipt, not an
+independently issued invoice. `payment-recheck-06.json` and live trial notes
+retain the result, and saved evidence was also rechecked offline.
 
-**Broken/limits:** no documented check failed. Two URLs may share infrastructure;
-even matching current observations are not consensus or receipt proofs. Saved
-source labels are unauthenticated. Identical provider transcript bytes are valid
-and do not establish independent operators. Consistent false observations or
-later reorgs can defeat this evidence. Recipient ownership, invoice provenance,
-deduplication and present balances are not established. Replay cannot establish
-today's canonicality. Input reads do not prove hardlink provenance or defend
-against in-place file mutation. Failed providers conservatively reject acceptance.
+**Broken/limits:** no documented check failed. Single-provider recheck cannot
+preserve a paired-provider requirement by itself; this gathering supplies the
+missing shared glue below. Two public URLs may share operators. Matching false
+observations, unauthenticated source labels, later reorgs and replay's historical
+nature remain limitations. Head advancement is not wall-clock freshness, proof
+of ownership, invoice provenance, deduplication or a payment ledger.
 
-**Goal/scope:** useful on real transactions outside the cave, distinct from capture,
-shape and encoding. Current bounded provider-evidence scope fits. A trustless
-consensus verifier or complete payment processor would be too broad: narrow to
-canonical receipt observations and an independently chosen settlement policy.
+**Goal:** real transaction checks are useful outside the cave and distinct from
+capture, JSON shape and EIP-712 encoding. The bounded observation scope fits.
+Narrow a proposed complete payment processor or trustless consensus verifier to
+canonical receipt evidence under an independently supplied policy.
 
-## Line 4 — EIP-712 digest and complete intended request
+## Line 4 — EIP-712 and captured public account
 
-**Tried:** known digest CLI and inherited tests (the file-writing tests ran on an
-exact scratch copy); expected trace and domain checks; new complete request
-self-comparison and 18 tests. All passed (**89 tests**). Historical ZTO digest
-is still `0xf33e2506e5c103f98dbfe3feb6d4b87d55f1fad4e423dbaa8462465ff4ab9774`.
-The altered-amount fixture is exercised by the tests and rejects with exit 1.
+**Tried:** digest/example tests, trace/domain checks, intended typed-data comparison,
+and new captured-request self-comparison plus 17 tests. Ten commands passed,
+**106 tests**. File-writing digest tests ran on an exact scratch copy. Explicit
+account-mismatch CLI rejects with exit 1 even though both digests still match.
 
-**Works:** the new request comparison binds the complete independently prepared
-intended encoding: primary type, encoded field words, declarations, struct field
-order, dynamic preimages and the digest. It reports JSON Pointer differences.
-A one-raw-unit amount change affects `/message/minimumRaw` and `/message`.
-Equivalent integer/address spelling and object-key order may match; reordered
-field declarations, different empty-array types and UTF-8 bytes are detected.
-Valid unused type declarations are deliberately outside the commitment. Full
-input, trace and report bounds still apply in summary mode.
+**Works:** exact encoding, declarations, ordered fields, dynamic preimages and
+JSON Pointer differences. The captured-envelope checker adds the public account
+parameter that EIP-712 does not commit to. It parses strict provider or JSON-RPC
+2.0 envelopes and embedded JSON strings with bounded no-follow inputs. Address
+case and equivalent encoded integers can match; malformed wrappers/methods,
+extra params, duplicate embedded keys and changed accounts fail. Transport IDs
+and wrapper choice are deliberately ignored. No captured method is dispatched.
+Historical ZTO digest remains
+`0xf33e2506e5c103f98dbfe3feb6d4b87d55f1fad4e423dbaa8462465ff4ab9774`.
 
-**Broken/limits:** no documented check failed. The example self-comparison is an
-execution demo, not independent approval. A caller must independently establish
-what request is intended. The shared digest/trace encoder is not independent
-cryptographic verification. A match cannot authenticate a requester, authorize
-signing, prove contract support, enforce replay protection or prove payment.
-POSIX and the deliberate EIP-712/input subset remain requirements.
+**Broken/limits:** no documented check failed. Self-comparison demonstrates
+execution, not independent approval. A caller must establish the intended data
+and account separately. Matching requests do not prove account ownership,
+consent, payment, replay protection or contract support. Shared encoder code is
+not an independent cryptographic implementation; this supports a deliberate
+EIP-712/input subset, not every wallet extension.
 
-**Goal/scope:** useful to unfamiliar workers checking actual client requests;
-distinct from Line 2's structural contracts and Line 3's payment policy. The
-stated digest goal fits and is already usable. If expanded toward general wallet
-safety, narrow back to exact intended byte/encoding comparison.
+**Goal:** useful to unfamiliar workers comparing client bytes, distinct from
+structural contracts and settlement. The original digest goal already works;
+keep any broader wallet-safety effort to independently intended request bytes.
 
-## Shared piece — corroborated payment request comparison
+## Shared — paired payment revisit with captured request binding
 
-Added `shared/payment-evidence/corroborate.py` and **16 integration tests**.
-Vendored the new Line 3 agreement and Line 4 request comparison unchanged;
-refreshed the unchanged current Line 3 witness copy for its safer replay reader.
-`provenance.json` records exact source/copy hashes. The existing Line 1 bounded
-capture, Line 2 exact transcript contracts and Line 4 input reader remain in use.
-No line code changed. Direct transport in the vendored settlement remains disabled.
+Added `shared/payment-evidence/revisit.py`, **14 integration tests**, a historical
+ZTO demo envelope and its actual result. Copied Line 3 payment-recheck, Line 4
+RPC-envelope checker, and Line 2 rule-locator plus its two siblings byte-for-byte
+into the existing shared folder. `provenance.json` records source/copy hashes.
+Existing Line 1 bounded capture and all ancestor shared commands remain intact;
+the shared settlement transport remains disabled.
 
-The new command requires four separate inputs: paired observations, independent
-payment policy, the complete independently reviewed intended request, and the
-exact client request. It recomputes both transcripts, checks their exact structure
-and independently supplied policy, demands full provider agreement, and derives a
-fixed read-only EIP-712 commitment binding policy, both source labels and both
-complete transcript hashes. Acceptance additionally requires the derived request
-to match the intended request and the intended request to match the client's.
-There is no single-provider or domain-only shortcut.
+This command requires a baseline pair, current pair, separately chosen unchanged
+policy, independently reviewed intended envelope, and captured client envelope.
+Both baseline providers must agree and pass policy. Both current providers must
+agree and pass policy; each must advance without any recheck alert. The current
+complete paired-evidence commitment must match the intended typed data; the
+client must match the intended encoding **and public account**. No saved accepted
+flag, single-provider fallback, policy relaxation or digest-only shortcut passes.
+Invalid policy shapes receive Line 2's exact contract-rule explanations.
 
-One offline command anyone can run from the repository root:
+One offline command from the repository root:
 
 ```sh
-python3 -B shared/payment-evidence/corroborate.py shared/payment-evidence/example.paired.json shared/payment-evidence/example.paired-policy.json shared/payment-evidence/example.paired-intended.json shared/payment-evidence/example.paired-intended.json --summary
+python3 -B shared/payment-evidence/revisit.py shared/payment-evidence/example.paired.json shared/payment-evidence/round05.paired.json shared/payment-evidence/example.paired-policy.json shared/payment-evidence/example.revisit-envelope.json shared/payment-evidence/example.revisit-envelope.json --summary
 ```
 
-Exit **0**, corroborated historical ZTO evidence, zero encoding differences.
-Example commitment:
-`0x62ff5d3efeeb1fbd5e9749792bac95e13e75cbaeb97523ad666b03129cb4b521`.
-The bundled intended/client self-comparison is explicitly a demonstration.
-For actual acceptance a person must supply their own policy and reviewed request.
+Exit **0**, `continued`; both historical provider heads advance from **26192482**
+to **26192584**, with unchanged payment events. Intended/client self-comparison
+and the recipient used as illustrative public account are explicitly a demo,
+not consent, ownership, a signing request or an independent invoice. Nothing in
+that envelope is sent. Fresh single-provider observations above are kept separate
+and never relabeled as independent paired evidence.
 
-Tests cover payment shortfall despite matching encodings; client-only and
-intended/client amount changes; wrong intended domain; changed field order;
-source/transcript swaps; changed transcript content with unchanged payment facts;
-divergent event sets; duplicate/missing/reordered evidence; strict policy binding;
-equivalent spellings; input immutability; full/summary agreement; limits and CLI
-exit codes. The first local test pass exposed a faulty test assumption that two
-actual source transcripts must differ; the test now permits identical observations
-and tests distinct swapped hashes using clearly marked rejection-fixture metadata.
-The acceptance implementation did not need relaxing.
+Tests cover stale/single/missing providers, account changes despite equal digests,
+relaxed policy, contract rule pointers, changed intended/client values together,
+equal-amount changed senders in both providers, exact false-versus-zero requests,
+extra flags/reads, unaccepted baselines, case equivalence, transport metadata,
+immutability, output limits and CLI exits. A detached folder copy with **no line
+folders or network** passes the command and all 14 tests (`portable-check-06.json`).
+All shared suites together pass **74 tests**. Integration retains upstream limits:
+unauthenticated historical provider observations are not consensus/receipt proofs
+and advancing height is not clock freshness. Callers must choose policy and
+reviewed envelopes independently; baseline promotion always remains manual.
 
-A detached copy of this folder passed both its CLI and all 16 tests without line
-folders, network or packages (`portable-check-05.json`). Existing shared tests all
-pass. New fresh files `round05.{paired,policy,intended,corroboration}.json` retain
-actual public observations and a derived demonstration commitment:
-`0x6655275b09cf4920fff5c2d6194e24cc946ee9d6e8017c5084b90c06b4230c41`.
-No invented chain data is delivered as a real observation. Requests are read-only
-content commitments, never permits or signing authorization.
+## Coins, gallery and painting
 
-## Coins, gallery and mark
+`COINS.md`: **none**. Existing ZTO supplies real token evidence and IMD remains
+supported second. None of the four goals needs another coin or a Uniswap hook.
+No contract is present to propose for Sepolia. No launch/deploy order, POST,
+signature, payment or deployment was made.
 
-`COINS.md` says **none**: the goals require public evidence and offline checks,
-not coin issuance. ZTO already supplies real payment observations, with IMD
-supported second. No new hook, coin, launch request, contract deployment or
-request-check POST is needed. Nothing was signed, sent, paid, posted or deployed.
+No goal is cave-only or duplicates another. All four GOAL.md files remain intact;
+`dist/goals.json` copies them. The scope notes above identify how to narrow any
+future oversized ambition. This is gathering **06**; existing painted gathering
+records 01–05 mean first-gathering placeholder creation is not triggered. Slot 06
+is replaced by its actual record/preview; other records remain unchanged.
 
-None of the four goals is cave-only or repeats another. All four GOAL.md files
-remain unchanged; `dist/goals.json` copies their text. No replacement goal or
-mandatory narrowing is proposed; each line already has a useful bounded piece.
-This is gathering **05**, with existing painted gathering records 01–04, so the
-first-gathering placeholder creation rule does not apply. Slot 05 was overwritten
-with this record and preview; every other placeholder remains unchanged.
+Rebuilt `dist/index.html`: **125 records**, **30 paintings**, **95 pending slots**,
+grouped by wall, newest painted first with future slots expandable. One HTML page
+contains all styles, captions and navigation; no external executable dependency.
+Painted previews are local, full wall/pending-cave links use public artifact URLs.
+HTML escapes record content and preview metadata points to the newest gathering.
 
-`dist/index.html` now includes **121 records**, **25 paintings** and **96 pending
-slots**, grouped by wall with newest paintings first and pending slots expandable.
-It has inline styles/captions, local painted thumbnails and no remote executable
-dependency. Full-size wall and bare-cave links use public artifacts. The preview
-metadata now selects the newest painted gathering. All line records are preserved.
+Downloaded the latest gathering through record 05 and verified its exact SHA-256
+`17bfac691c7494b63d1e91040056a58299cf219a19d28d243249932b71579e46`.
+The installed image tool made the new worn ochre Pepe head and returning trail.
+Placed pigment only on vacant stone above the ancestor eye: rectangle x **400–589**,
+y **138–215**. **4753 pixels changed**, **1567763 unchanged**. Every pixel outside
+the addition and every protected deep crack retains its ancestral RGB bytes.
+No previous mark was erased, moved or redrawn. The generated intermediate was
+overwritten by the complete finished wall; no extra image is delivered.
 
-Downloaded gathering 04 through its public record and verified SHA-256
-`d635c322bc05dccc59fe206ff48a2f136edfe3b7a2966656ad8fe94687cdbe9f`.
-The installed image tool generated two linked ochre eye loops. Only earth pigment
-was composited onto vacant stone below the bowl; all pixels outside x **562–751**,
-y **890–979** and deep dark cracks within that rectangle are unchanged. Exactly
-**8870 pixels changed**, **1563646 unchanged**. No ancestor mark was erased,
-moved or redrawn. The generated intermediate was overwritten by the final wall.
+Wall: **1254 × 1254 RGB PNG**, identical at required
+`artifacts/gathering/wall-v6.png` and `artifacts/gathering/wall.png`.
+Preview: **512 × 512 JPEG**, **75342 bytes**, `dist/gathering/06.jpg`.
+Record 06 has exactly the requested fields/six traits and lowercase final SHA-256
+artifact URL. Full PNG and decoded JPEG were visually inspected; both pass image
+structure inspection. Inherited recognizable Pepe retains broad mouth and heavy
+lids; warm rock, cracks, colour, torchlight, water and framing remain. No hands or
+handprints appear, hence no digits to count. No letters, numbers, captions,
+logos, signatures, watermarks, borders, frames, real people or prohibited symbols
+observed. **No known unmet visual requirements.** Prompt, dimensions, hashes,
+preservation statistics and visual inspection are in `wall-review-06.json`.
 
-Full wall: **1254 × 1254 RGB PNG**, identical at required
-`artifacts/gathering/wall-v5.png` and `artifacts/gathering/wall.png`. Preview:
-**512 × 512 JPEG**, **75379 bytes**, `dist/gathering/05.jpg`. Record 05 has the
-required exact six traits and the final PNG's lowercase SHA-256 artifact URL.
-Both full PNG and decoded JPEG were inspected. Recognizable ancestor Pepe keeps
-his broad mouth and heavy-lidded eyes; warm rock, colour, cracks, torchlight,
-water and framing remain. No hands or handprints are depicted, so no digits
-require counting. No text, letters, numerals, captions, logos, signatures,
-watermarks, borders, frames, real people or prohibited symbols observed.
-**No known unmet visual requirements.** Full prompt, formats, preservation counts
-and local inspection notes are in `wall-review-05.json`.
+Structural delivery checks pass for PNG/JPEG bytes, record hash/traits, all future
+slots, goals, gallery ordering, source/copy provenance, unchanged line hashes and
+the 100 KB limit outside artifacts. An oversized check log was corrected by
+removing outer JSON formatting without dropping any command output. These checks
+certify neither visual quality nor chain truth. Artifact PNGs stay untracked for
+separate upload. Changes are confined to gathering/, shared/, dist/ and
+artifacts/gathering/; disposable checking scaffolding lives in test/scratch/.
 
-Structural delivery checking passes: PNG/JPEG structure and dimensions, record
-hash/traits, placeholder coverage, goals, gallery order, vendored provenance,
-unchanged line hashes and the 100 KB limit outside artifacts. Its results do not
-certify visual quality or chain truth. Required PNGs remain untracked for separate
-upload. Source/delivered changes are confined to gathering/, shared/, dist/ and
-artifacts/gathering/; scratch scaffolding is confined to test/scratch/.
+## Submission boundary
+
+Local `git diff --check` and scope/size checks passed. Attempting to stage only
+`gathering shared dist` failed: `fatal: Unable to create '.git/index.lock':
+Read-only file system`. No alternate index, configuration change or permission
+change was attempted. All dependencies are ordinary workspace files, with no
+installation or submodule; the source additions remain unstaged for the network's
+submission process. Required artifact PNGs remain untracked as requested.

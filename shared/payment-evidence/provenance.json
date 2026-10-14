@@ -61,5 +61,40 @@
     "sha256": "c9bae636437c25a66d8eb459cd3450d3a6ac5c12b458b97f06613bb594c8c71e",
     "copiedSha256": "c9bae636437c25a66d8eb459cd3450d3a6ac5c12b458b97f06613bb594c8c71e",
     "adaptation": "none; byte-for-byte source copy"
+  },
+  {
+    "source": "line-3/tools/payment-recheck/recheck.py",
+    "copy": "vendor/payment-recheck/recheck.py",
+    "sha256": "58728a977aa4ec70c8e8265cab3edc04b12498fa9b4b84683ffeb275adbbedb5",
+    "copiedSha256": "58728a977aa4ec70c8e8265cab3edc04b12498fa9b4b84683ffeb275adbbedb5",
+    "adaptation": "none; byte-for-byte source copy"
+  },
+  {
+    "source": "line-4/tools/rpc-request-check/rpc_request_check.py",
+    "copy": "vendor/rpc_request_check.py",
+    "sha256": "512ae8ec269f6f648352f722677b6e0ffb4c44e54cb2200030fbc0d5e9886993",
+    "copiedSha256": "512ae8ec269f6f648352f722677b6e0ffb4c44e54cb2200030fbc0d5e9886993",
+    "adaptation": "none; byte-for-byte source copy"
+  },
+  {
+    "source": "line-2/tools/rule-locator/explain.py",
+    "copy": "vendor/rule-locator/explain.py",
+    "sha256": "e8547dda01ba178d9604c484c8518d327f418d9ba132c005e147128e20636db1",
+    "copiedSha256": "e8547dda01ba178d9604c484c8518d327f418d9ba132c005e147128e20636db1",
+    "adaptation": "none; byte-for-byte source copy"
+  },
+  {
+    "source": "line-2/tools/bounded-contract/check.py",
+    "copy": "vendor/bounded-contract/check.py",
+    "sha256": "51b57858d6bd0738af1edac9ba596bb019765e5fe5f7c4b371b181de37b21981",
+    "copiedSha256": "51b57858d6bd0738af1edac9ba596bb019765e5fe5f7c4b371b181de37b21981",
+    "adaptation": "none; byte-for-byte source copy"
+  },
+  {
+    "source": "line-2/tools/json-contract/check.py",
+    "copy": "vendor/json-contract/check.py",
+    "sha256": "c7f8ef3761069ce6778917c7b16d8fc5ed99a76b1aab50da3c9bdd3dc2e43a0c",
+    "copiedSha256": "c7f8ef3761069ce6778917c7b16d8fc5ed99a76b1aab50da3c9bdd3dc2e43a0c",
+    "adaptation": "none; byte-for-byte source copy"
   }
 ]

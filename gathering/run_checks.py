@@ -66,6 +66,21 @@ def main():
         ['shared/payment-evidence/test_corroborate.py'],
         ['shared/payment-evidence/corroborate.py', 'shared/payment-evidence/example.paired.json', 'shared/payment-evidence/example.paired-policy.json', 'shared/payment-evidence/example.paired-intended.json', 'shared/payment-evidence/example.paired-intended.json', '--summary'],
     ])
+    commands.extend([
+        ['line-1/tools/compare-zto-snapshots/compare.py', 'line-1/tools/hash-pinned-zto/live-zto.json', 'line-1/tools/compare-zto-snapshots/live-zto.json'],
+        ['line-1/tools/compare-zto-snapshots/test_compare.py'],
+        ['line-2/tools/rule-locator/explain.py', 'shared/payment-evidence/policy.contract.json', 'shared/payment-evidence/example.policy.json'],
+        ['line-2/tools/rule-locator/test_explain.py'],
+        ['line-2/tools/bounded-contract/check.py', 'line-2/tools/ordered-deliverables/record.strict.contract.json', 'dist/line-2/26.json'],
+        ['line-3/tools/payment-recheck/recheck.py', '--demo'],
+        ['-m', 'unittest', 'discover', '-s', 'line-3/tools/payment-recheck', '-v'],
+        ['line-4/tools/rpc-request-check/rpc_request_check.py', 'line-4/tools/rpc-request-check/zto-envelope.json', 'line-4/tools/rpc-request-check/zto-envelope.json', '--summary'],
+        ['-m', 'unittest', 'discover', '-s', 'line-4/tools/rpc-request-check', '-v'],
+    ])
+    commands.extend([
+        ['shared/payment-evidence/test_revisit.py'],
+        ['shared/payment-evidence/revisit.py', 'shared/payment-evidence/example.paired.json', 'shared/payment-evidence/round05.paired.json', 'shared/payment-evidence/example.paired-policy.json', 'shared/payment-evidence/example.revisit-envelope.json', 'shared/payment-evidence/example.revisit-envelope.json', '--summary'],
+    ])
     results = []
     for args in commands:
         command = [sys.executable, '-B', *args]
@@ -75,7 +90,7 @@ def main():
                         'exitCode': result.returncode, 'seconds': round(time.monotonic()-started, 3),
                         'stdout': result.stdout, 'stderr': result.stderr})
         print('PASS' if result.returncode == 0 else 'FAIL', ' '.join(args), flush=True)
-    (ROOT / 'gathering/check-results.json').write_text(json.dumps(results, indent=2)+'\n')
+    (ROOT / 'gathering/check-results.json').write_text(json.dumps(results, separators=(',', ':'))+'\n')
     return 0 if all(r['exitCode'] == 0 for r in results) else 1
 
 

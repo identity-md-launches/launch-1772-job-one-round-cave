@@ -1,0 +1,49 @@
+{
+  "ancestorSha256": "17bfac691c7494b63d1e91040056a58299cf219a19d28d243249932b71579e46",
+  "ancestorSize": [
+    1254,
+    1254
+  ],
+  "wallSize": [
+    1254,
+    1254
+  ],
+  "wallFormat": "PNG",
+  "wallMode": "RGB",
+  "wallSha256": "79c12fa2c03d587d5aa0367412946c5662d498e40ef1837973f8c33ee705d9dc",
+  "generatedDraftSha256": "ab3db95403565da1606c99cfcf68fde13392051f301689878a4b6a8c6b23e4e8",
+  "generatedDraftSize": [
+    1774,
+    887
+  ],
+  "generatedDraftRetained": false,
+  "changedPixels": 4753,
+  "unchangedPixels": 1567763,
+  "changedPixelBounds": [
+    400,
+    138,
+    587,
+    215
+  ],
+  "additionRectangle": [
+    400,
+    138,
+    190,
+    78
+  ],
+  "allPixelsOutsideAdditionUnchanged": true,
+  "deepCracksProtected": true,
+  "previewSize": [
+    512,
+    512
+  ],
+  "previewFormat": "JPEG",
+  "previewBytes": 75342,
+  "previewQuality": 52,
+  "imageTool": "image_gen__imagegen",
+  "prompt": "Generate ONLY one isolated prehistoric pigment mark on a transparent background, for additive placement onto an existing ancient cave wall. A small unmistakable Pepe the frog HEAD with wide flat drooping mouth and two big heavy-lidded eyes, drawn with uneven burnt-stick charcoal and red and yellow ochre pigment. Around the small frog head is a broken, irregular yellow ochre curved trail bending back toward the eyes, suggesting returning to look again. No body, no hands, no handprints, no arrows, no geometric precision. Simple flat handmade prehistoric mark with worn gaps in the strokes, stone will show through after compositing. One compact horizontal motif, roughly twice as wide as high. Only earth pigments: charcoal black, muted red ochre, muted yellow ochre. No green. No white rectangle, no rock, no background scene, no text, letters, numbers, captions, signatures, logos, watermarks, borders or frames, no photographic or 3D elements. Preserve transparent background. This is a new pigment insert only; the ancestral cave and marks will remain byte-preserved around it.",
+  "reviewStatus": "visually inspected full PNG and decoded JPEG",
+  "unmetVisualRequirements": [],
+  "handDigitReview": "No hands or handprints in inherited wall or addition; no digits to count.",
+  "visualReview": "Inherited Pepe and every old mark remain. Added a small worn red-ochre Pepe head and ochre return trail above the old eye on vacant stone. Warm rock, cracks, torchlight, water and square framing preserved. No letters, numbers, captions, logos, signatures, watermarks, borders, frames or prohibited symbols observed. Generated trail curls back like a pointed tail; no text."
+}

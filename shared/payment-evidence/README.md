@@ -306,3 +306,78 @@ provenance, recipient ownership, invoice validity, deduplication and signing
 authorization remain the caller's responsibility. Complete file content binding
 is intentionally stricter than payment-fact agreement: changed harmless metadata
 requires reviewing a new intended commitment.
+
+## Gathering 06: revisit paired payments and captured client requests
+
+`revisit.py` preserves the two-provider requirement when rechecking a previously
+accepted payment. It combines the new Line 3 checkpoint comparison, Line 4
+captured-envelope account check and Line 2 exact contract-rule explanations.
+These sources and the locator's siblings are copied byte-for-byte into `vendor/`;
+`provenance.json` identifies each source/copy hash. Line folders are not needed.
+No packages, network, environment configuration, wallet or secret is required.
+The shared settlement transport remains disabled; this command is offline only.
+
+One command from the repository root:
+
+```sh
+python3 -B shared/payment-evidence/revisit.py shared/payment-evidence/example.paired.json shared/payment-evidence/round05.paired.json shared/payment-evidence/example.paired-policy.json shared/payment-evidence/example.revisit-envelope.json shared/payment-evidence/example.revisit-envelope.json --summary
+```
+
+Observed: exit **0**, `accepted: true`, `state: continued`. Both saved historical
+provider heads advance from 26192482 to 26192584, and the real ZTO receipt's
+selected-token events remain identical. The envelope embeds the actual derived
+round-05 read-only content commitment. Its public account is the receipt's
+observed recipient, solely an illustrative address. Intended/client self-comparison
+is an execution demo, not a request by that account, account ownership, consent,
+authorization, an independent invoice or something to send to a wallet.
+
+Supply five separately chosen inputs for your own work:
+
+1. An earlier accepted paired checkpoint, retained without automatic replacement.
+2. A newly collected paired checkpoint with the same provider labels/order.
+3. An independently chosen unchanged payment policy.
+4. The independently reviewed intended request envelope, including public account.
+5. The separately captured client request envelope; it is never dispatched.
+
+Both baseline observations must meet policy and agree. Each current provider
+must advance its sampled head without any checkpoint alert; both must also meet
+policy and agree now. Current transcript commitments must match the complete
+intended typed data, and the client must match both its encoding and public
+account. Rechecking only one provider, stale heads, changed inclusion/events,
+relaxed policy, changed accounts despite equal digests and changed intended/client
+values together all reject continued reliance. Transport IDs and provider versus
+JSON-RPC wrappers are validated but ignored, just as the upstream checker specifies.
+Invalid policy structure reports both document and exact contract-rule pointers.
+
+Exit **0** means every gate passed, **1** means valid observations/requests require
+review, **2** means invalid inputs or policy structure. No saved `accepted` flag
+is trusted. Inputs use the inherited strict bounded no-follow reader: workspace
+regular files, 65,536 bytes, depth 48, 8,192 nodes; duplicate JSON keys, floats,
+nonfinite values, hidden/parent paths and symlinks are refused. This is a deliberate
+subset. Complete output is capped at 100,000 bytes; summary still checks the full
+output before removing diagnostic differences. Errors print JSON with false
+acceptance. Missing/broken provider evidence cannot fall back to one provider.
+
+Run the new checks:
+
+```sh
+python3 -B shared/payment-evidence/test_revisit.py
+```
+
+All **14 tests** pass: historical observations, immutable inputs, stale/missing/
+single providers, independently unchanged policy, exact rule locations, equal
+digests with different accounts, coordinated intended/client changes, equal-net
+changed events, exact request JSON types, extra reads/flags, rejected baselines,
+case and transport metadata, report limits and CLI exits. A detached copy also
+passes the demo and tests without line folders or network. Results are in
+`gathering/portable-check-06.json`; `example.revisit-report.json` records the demo.
+
+This retains upstream evidence limits. Two labels/URLs do not prove independent
+operators. Consistently false/resealed observations may pass; source labels and
+content hashes authenticate neither providers nor chain truth. Higher heads do
+not prove wall-clock freshness. Replay remains historical, not current consensus
+or a receipt proof. Matching envelopes do not establish account ownership,
+consent, signature, replay protection, contract support, invoice provenance,
+deduplication or present balances. Callers must review intended inputs and decide
+whether to promote a checkpoint manually. Fresh gathering-06 single-provider
+trials are deliberately not claimed as fresh paired observations.

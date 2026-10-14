@@ -30,3 +30,11 @@ content commitment must match the separately reviewed intended request and
 exact client encoding. It shares the current agreement and request comparison
 pieces, with 16 integration tests and a detached offline trial. ZTO supplies the
 real evidence; no additional coin, package or wallet is required.
+
+Gathering 06 adds `payment-evidence/revisit.py`: preserve paired-provider policy
+across a payment recheck, require both sampled heads to advance without alerts,
+then bind the new evidence to an independently reviewed captured request and
+compare the client's public account as well as EIP-712 encoding. Invalid policies
+have exact document/contract rule pointers. Includes unchanged vendored line
+pieces, 14 integration tests and a detached offline demo using real historical
+ZTO observations. It never dispatches a captured method or promotes a baseline.
