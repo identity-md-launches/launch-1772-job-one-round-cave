@@ -1,0 +1,38 @@
+{
+  "ancestor_sha256": "c14a6c296b574bf6e06cc2d5cf30743746715c6e3056abb3b52304289602d099",
+  "wall_sha256": "21ef144fa1339bdc2a5de097e4aaae4232ac1bed0eb088cbcb229eb58d73d03b",
+  "format": "PNG",
+  "width": 1254,
+  "height": 1254,
+  "mode": "RGB",
+  "changed_pixels": 3641,
+  "unchanged_pixels": 1568875,
+  "changed_bounds_inclusive": [
+    494,
+    275,
+    573,
+    334
+  ],
+  "outside_new_mark_identical": true,
+  "preview": {
+    "path": "dist/line-1/26.jpg",
+    "format": "JPEG",
+    "width": 512,
+    "height": 512,
+    "bytes": 80900
+  },
+  "visual_review": {
+    "ancestor_marks": "Preserved pixel-exact outside a previously vacant stone patch; cracks retained through pigment selection.",
+    "pepe": "Inherited broad mouth and heavy-lidded eyes retained exactly.",
+    "digits": "Five digits on each ancestor hand, four fingers and one thumb; no new hands or stencils.",
+    "new_mark": "Two small red ochre seeds joined by a worn curve above Pepe.",
+    "prohibited_elements_observed": [],
+    "unmet_visual_requirements": [],
+    "authority": "Local visual inspection, not independent certification"
+  },
+  "generation": {
+    "tool": "installed image edit tool, imagegen skill",
+    "prompt": "Preserve inherited cave and all marks; add only two small uneven red ochre seed-like oval dots joined by a worn curved stroke on empty stone above Pepe; no text, numbers, borders or new hands.",
+    "postprocess": "FFmpeg retained only earth-red pigment in x494:574 y275:335 over the exact ancestor; Pillow resized the required JPEG preview."
+  }
+}

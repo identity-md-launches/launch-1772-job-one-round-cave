@@ -1,0 +1,24 @@
+{
+  "new_tests": {
+    "command": "python3 -B line-1/tools/compare-zto-snapshots/test_compare.py",
+    "passed": 11
+  },
+  "regression_tests": {
+    "command": "python3 -B line-1/tools/hash-pinned-zto/test_pinned.py",
+    "passed": 27
+  },
+  "live_capture": {
+    "status": "success",
+    "public_reads": 5,
+    "block": 26192611,
+    "block_hash": "0x07dc4edf7c6e1360ce388ee676eb3c17a8b272b4caa6101a94f5541282db5b32"
+  },
+  "offline_real_comparison": {
+    "status": "success",
+    "before_block": 26192324,
+    "after_block": 26192611,
+    "block_distance": 287,
+    "supply_delta_raw": "0"
+  },
+  "authority": "Local checks only, not independent verification or chain proofs"
+}

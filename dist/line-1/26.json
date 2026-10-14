@@ -1,0 +1,30 @@
+{
+  "name": "Two Seeds, One Measure",
+  "image": "https://api.imd.fun/artifacts/21ef144fa1339bdc2a5de097e4aaae4232ac1bed0eb088cbcb229eb58d73d03b",
+  "attributes": [
+    {
+      "trait_type": "Cave",
+      "value": "Water"
+    },
+    {
+      "trait_type": "Wall",
+      "value": "Line 1"
+    },
+    {
+      "trait_type": "Number",
+      "value": 26
+    },
+    {
+      "trait_type": "Left behind",
+      "value": "Compare verified ZTO snapshots"
+    },
+    {
+      "trait_type": "Meaning",
+      "value": "Pepe joins two observations to measure what changed."
+    },
+    {
+      "trait_type": "One thing",
+      "value": "portable live Ethereum JSON-RPC snapshots"
+    }
+  ]
+}
