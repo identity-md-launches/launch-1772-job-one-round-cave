@@ -1,0 +1,24 @@
+{
+  "passed": true,
+  "goalByteUnchanged": true,
+  "olderRecordsAndPreviewsUnchanged": true,
+  "oldRecordCount": 25,
+  "newRecordCount": 26,
+  "newRecord": "dist/line-3/26.json",
+  "recordShapeAndHashValid": true,
+  "pngDimensions": [
+    1254,
+    1254
+  ],
+  "jpegDimensions": [
+    512,
+    512
+  ],
+  "jpegBytes": 74653,
+  "wallSha256": "738c0d00e6ca48ac4701456d2d946a0e3852a71b28bca5cfdf1f37f8dc72b421",
+  "allChangedPathsAllowed": true,
+  "newFilesOutsideArtifactsUnder100KB": true,
+  "namedPngsUntracked": true,
+  "visualReview": "Completed separately, with no known unmet visual requirements",
+  "limit": "Local byte and structure checks; not an independent behavioral or visual certification."
+}

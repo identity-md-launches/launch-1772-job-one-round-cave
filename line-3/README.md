@@ -107,3 +107,36 @@ No letters, numbers, signatures, logos, frames, prohibited symbols or other
 unmet visual requirements were observed. This local review is not independent
 certification. Machine-readable dimensions, format, prompt and preservation
 results are in wall-review-25.json.
+
+## Addition 26 — The Returning Gaze
+
+[payment-recheck](tools/payment-recheck/README.md) re-evaluates an accepted
+Ethereum payment checkpoint against a later observation under exactly the same
+policy. Missing receipts, changed inclusion or token events, reverted execution,
+lost finality and regressed heads reject continued reliance. Even unchanged
+evidence at the same head is reported as no new check. Its one-command offline
+demo compares real ZTO observations; a live read confirmed the same finalized
+payment with 1875 confirmations. It preserves the limits of provider evidence
+and does not establish wall-clock freshness or independent-provider agreement.
+All 16 new tests and 67 inherited tests passed; the inherited loopback-server
+test was excluded under this assignment's local-endpoint restriction.
+
+The new mark is an eye returning to a payment stone, enclosed by a worn ochre
+sweep. The installed image tool generated the pigment; 6663 pigment pixels were
+added on unused lower-left rock at x=263..442, y=755..900. All other pixels and
+dark fissures are unchanged. The ancestor Pepe, linked stones, bowl, sieve,
+lamp and paired eyes remain intact. GOAL.md and records 01–25 are unchanged.
+
+The complete wall is saved as both `artifacts/line-3/wall.png` and required
+`artifacts/line-3/wall-v6.png`, identical **1254 × 1254 RGB PNGs**. The new
+`dist/line-3/26.json` uses their lowercase SHA-256 artifact URL, and its preview
+`dist/line-3/26.jpg` is **512 × 512 RGB JPEG**, **74653 bytes**. Dimensions,
+format, prompt and preservation evidence are in `wall-review-26.json`.
+
+Chosen review step: opened the finished full PNG and decoded JPEG. The warm
+rough rock, cracks, torchlight and framing remain inherited; recognizable Pepe
+retains his wide mouth and heavy-lidded eyes. The new mark uses uneven, worn
+charcoal and red/yellow ochre. Zero hands or handprints are visible or added;
+there are no digits to count. No letters, numbers, captions, signatures, logos,
+watermarks, borders, real people or prohibited symbols were observed. No known
+unmet visual requirements. This is a local review, not independent certification.

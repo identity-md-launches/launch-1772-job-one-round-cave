@@ -1,0 +1,30 @@
+{
+  "name": "The Returning Gaze",
+  "image": "https://api.imd.fun/artifacts/738c0d00e6ca48ac4701456d2d946a0e3852a71b28bca5cfdf1f37f8dc72b421",
+  "attributes": [
+    {
+      "trait_type": "Cave",
+      "value": "Water"
+    },
+    {
+      "trait_type": "Wall",
+      "value": "Line 3"
+    },
+    {
+      "trait_type": "Number",
+      "value": 26
+    },
+    {
+      "trait_type": "Left behind",
+      "value": "payment-recheck"
+    },
+    {
+      "trait_type": "Meaning",
+      "value": "Pepe returns to the payment stone to see whether its witness still holds."
+    },
+    {
+      "trait_type": "One thing",
+      "value": "verify Ethereum transaction settlement"
+    }
+  ]
+}

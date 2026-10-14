@@ -1,0 +1,56 @@
+{
+  "round": 26,
+  "testsPassed": 83,
+  "testsFailed": 0,
+  "excludedTests": [
+    {
+      "test": "rpc-boundary.BoundaryTests.test_actual_http_redirect_refused",
+      "reason": "Creates another loopback endpoint; assignment permits only its designated local endpoint."
+    }
+  ],
+  "commands": [
+    {
+      "command": "python3 -B -m unittest discover -s line-3/tools/settlement-check -p 'test_*.py'",
+      "exitCode": 0,
+      "summary": "................\n----------------------------------------------------------------------\nRan 16 tests in 0.010s\n\nOK"
+    },
+    {
+      "command": "python3 -B -m unittest discover -s line-3/tools/payment-witness -p 'test_*.py'",
+      "exitCode": 0,
+      "summary": "..............\n----------------------------------------------------------------------\nRan 14 tests in 0.002s\n\nOK"
+    },
+    {
+      "command": "python3 -B -m unittest discover -s line-3/tools/discovery-diagnostic -p 'test_*.py'",
+      "exitCode": 0,
+      "summary": "........\n----------------------------------------------------------------------\nRan 8 tests in 0.079s\n\nOK"
+    },
+    {
+      "command": "python3 -B -m unittest discover -s line-3/tools/provider-agreement -p 'test_*.py'",
+      "exitCode": 0,
+      "summary": "..................\n----------------------------------------------------------------------\nRan 18 tests in 0.006s\n\nOK"
+    },
+    {
+      "command": "python3 -B -m unittest discover -s line-3/tools/payment-recheck -p 'test_*.py'",
+      "exitCode": 0,
+      "summary": "................\n----------------------------------------------------------------------\nRan 16 tests in 0.023s\n\nOK"
+    },
+    {
+      "command": "python3 -B line-3/tools/payment-recheck/recheck.py --demo",
+      "exitCode": 0,
+      "summary": "accepted: true; state: continued; alerts: []"
+    },
+    {
+      "command": "rpc-boundary BoundaryTests, excluding test_actual_http_redirect_refused",
+      "exitCode": 0,
+      "summary": "11 tests passed"
+    }
+  ],
+  "liveCheck": {
+    "path": "line-3/tools/payment-recheck/live-check.json",
+    "state": "continued",
+    "sampledHead": 26192772,
+    "confirmations": 1875,
+    "publicSource": "https://ethereum-rpc.publicnode.com"
+  },
+  "reviewLimit": "Local observations, not independent certification."
+}

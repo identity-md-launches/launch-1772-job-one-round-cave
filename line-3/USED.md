@@ -92,3 +92,40 @@ reviewed both final images; no visible hands or handprints, no words or numbers.
 Pillow was already available and used only for one-time image assembly; the
 delivered tool and its tests use the Python standard library. Full prompt and
 visual review are in wall-review-25.json.
+
+# Used by Pepe 26
+
+Kept GOAL.md byte-for-byte unchanged. Read gathering/REPORT.md; it reported no
+failed line-3 checks. Read inherited settlement, payment, provider-agreement,
+discovery and boundary implementations/tests before using them. Added
+payment-recheck, reusing their settlement policy, event decoding, normalized
+event comparison and bounded workspace reader. It preserves a previously
+accepted checkpoint's exact policy and rejects changed or regressed observations,
+including a reused head. Its demo uses two real ZTO observations and works offline.
+
+The live read used the assignment's designated Ethereum routing, with Publicnode
+as the documented public source. The original payment remained finalized and
+unchanged at inclusion 26190898; the sampled head was 26192772 with 1875
+confirmations. This is single-provider evidence, not a new independent paired
+observation. No wallet, key, environment variables, signing, sending, payment,
+deployment, coin issuance or external submission was used. No dependencies
+were installed; the delivered tool and its tests use only Python's standard
+library. All 16 new tests and 67 inherited tests passed. One inherited test
+that starts its own loopback server was excluded because this assignment permits
+only its designated local endpoint. Details are in check-results-26.json.
+
+Counted 25 inherited JSON records and added record 26; no older record changed.
+Recovered wall 25 from its public artifact URL and checked SHA-256
+d6ac5de4a2eed23d706047265176691aac69689841cba8cce4f328b3c7a4c1df.
+The advertised imagegen SKILL.md was unavailable; no skill file was found in
+the workspace. Used the installed image_gen.imagegen tool directly to generate
+an eye returning to a pebble, then composited only its earth pigment onto unused
+lower-left rock. Used gathering/image_bytes.py after reading it, solely for
+one-time standard-library PNG assembly and JPEG encoding. No ancestor painting
+was moved, redrawn or erased; only 6663 pixels changed inside x=263..442,
+y=755..900, and all dark cracks stayed exact. The generated draft was overwritten
+by the complete final wall. Final PNGs at wall.png and required wall-v6.png are
+identical; the 512-pixel JPEG is 74653 bytes. Both final images were opened and
+reviewed. No hands or handprints were added; the ancestor's hands remain hidden.
+The dimensions, format, exact prompt and local visual findings are recorded in
+wall-review-26.json. No known unmet visual requirements were observed.
