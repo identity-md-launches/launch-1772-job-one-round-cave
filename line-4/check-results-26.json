@@ -1,0 +1,62 @@
+{
+  "newTests": 17,
+  "checks": [
+    {
+      "command": [
+        "python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "line-4/tools/rpc-request-check",
+        "-v"
+      ],
+      "expectedExit": 0,
+      "exit": 0,
+      "stdout": "",
+      "stderr": "test_amount_change (test_rpc_request_check.EnvelopeTests.test_amount_change) ... ok\ntest_bounds (test_rpc_request_check.EnvelopeTests.test_bounds) ... ok\ntest_case_equivalence (test_rpc_request_check.EnvelopeTests.test_case_equivalence) ... ok\ntest_cli_invalid_path (test_rpc_request_check.EnvelopeTests.test_cli_invalid_path) ... ok\ntest_cli_match_summary (test_rpc_request_check.EnvelopeTests.test_cli_match_summary) ... ok\ntest_cli_rejection (test_rpc_request_check.EnvelopeTests.test_cli_rejection) ... ok\ntest_complete_report_cap (test_rpc_request_check.EnvelopeTests.test_complete_report_cap) ... ok\ntest_cyclic_api (test_rpc_request_check.EnvelopeTests.test_cyclic_api) ... ok\ntest_duplicate_nested_keys (test_rpc_request_check.EnvelopeTests.test_duplicate_nested_keys) ... ok\ntest_historical_digest (test_rpc_request_check.EnvelopeTests.test_historical_digest) ... ok\ntest_input_unchanged (test_rpc_request_check.EnvelopeTests.test_input_unchanged) ... ok\ntest_nested_float (test_rpc_request_check.EnvelopeTests.test_nested_float) ... ok\ntest_public_account_not_in_digest (test_rpc_request_check.EnvelopeTests.test_public_account_not_in_digest) ... ok\ntest_reject_methods (test_rpc_request_check.EnvelopeTests.test_reject_methods) ... ok\ntest_reject_params (test_rpc_request_check.EnvelopeTests.test_reject_params) ... ok\ntest_reject_wrapper (test_rpc_request_check.EnvelopeTests.test_reject_wrapper) ... ok\ntest_transport_metadata (test_rpc_request_check.EnvelopeTests.test_transport_metadata) ... ok\n\n----------------------------------------------------------------------\nRan 17 tests in 0.445s\n\nOK\n"
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "line-4/tools/rpc-request-check/rpc_request_check.py",
+        "line-4/tools/rpc-request-check/zto-envelope.json",
+        "line-4/tools/rpc-request-check/zto-envelope.json",
+        "--summary"
+      ],
+      "expectedExit": 0,
+      "exit": 0,
+      "stdout": "{\n  \"digestMatches\": true,\n  \"encodingMatches\": true,\n  \"intended\": {\n    \"primaryType\": \"PaymentEvidence\",\n    \"domainSeparator\": \"0xb841b9b4b38823bdf4340d649cbad52a49cb75b55ddd1f91b457246dcb4f807d\",\n    \"messageHash\": \"0xac6db73f194d768dad814f953bcc998a7338581d687e8a9107ca85ed94077599\",\n    \"digest\": \"0xf33e2506e5c103f98dbfe3feb6d4b87d55f1fad4e423dbaa8462465ff4ab9774\"\n  },\n  \"client\": {\n    \"primaryType\": \"PaymentEvidence\",\n    \"domainSeparator\": \"0xb841b9b4b38823bdf4340d649cbad52a49cb75b55ddd1f91b457246dcb4f807d\",\n    \"messageHash\": \"0xac6db73f194d768dad814f953bcc998a7338581d687e8a9107ca85ed94077599\",\n    \"digest\": \"0xf33e2506e5c103f98dbfe3feb6d4b87d55f1fad4e423dbaa8462465ff4ab9774\"\n  },\n  \"differenceCount\": 0,\n  \"intendedSource\": \"caller-supplied; not authenticated by this tool\",\n  \"typedDataMatches\": true,\n  \"accountMatches\": true,\n  \"accepted\": true,\n  \"intendedAccount\": \"0x2d30e495a15f2657d57c3e2caa08b06415c26cbf\",\n  \"clientAccount\": \"0x2d30e495a15f2657d57c3e2caa08b06415c26cbf\",\n  \"transport\": {\n    \"intended\": \"provider\",\n    \"client\": \"provider\"\n  },\n  \"ignoredMetadata\": \"JSON-RPC id and transport wrapper are not signed or compared\",\n  \"accountBinding\": \"compared separately; public account parameter is not part of the EIP-712 digest\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "line-4/tools/rpc-request-check/rpc_request_check.py",
+        "line-4/tools/rpc-request-check/zto-envelope.json",
+        "line-4/tools/rpc-request-check/account-mismatch.json",
+        "--summary"
+      ],
+      "expectedExit": 1,
+      "exit": 1,
+      "stdout": "{\n  \"digestMatches\": true,\n  \"encodingMatches\": true,\n  \"intended\": {\n    \"primaryType\": \"PaymentEvidence\",\n    \"domainSeparator\": \"0xb841b9b4b38823bdf4340d649cbad52a49cb75b55ddd1f91b457246dcb4f807d\",\n    \"messageHash\": \"0xac6db73f194d768dad814f953bcc998a7338581d687e8a9107ca85ed94077599\",\n    \"digest\": \"0xf33e2506e5c103f98dbfe3feb6d4b87d55f1fad4e423dbaa8462465ff4ab9774\"\n  },\n  \"client\": {\n    \"primaryType\": \"PaymentEvidence\",\n    \"domainSeparator\": \"0xb841b9b4b38823bdf4340d649cbad52a49cb75b55ddd1f91b457246dcb4f807d\",\n    \"messageHash\": \"0xac6db73f194d768dad814f953bcc998a7338581d687e8a9107ca85ed94077599\",\n    \"digest\": \"0xf33e2506e5c103f98dbfe3feb6d4b87d55f1fad4e423dbaa8462465ff4ab9774\"\n  },\n  \"differenceCount\": 0,\n  \"intendedSource\": \"caller-supplied; not authenticated by this tool\",\n  \"typedDataMatches\": true,\n  \"accountMatches\": false,\n  \"accepted\": false,\n  \"intendedAccount\": \"0x2d30e495a15f2657d57c3e2caa08b06415c26cbf\",\n  \"clientAccount\": \"0xd782bdea4ef02a0bd391eb9089470c8080f0a68e\",\n  \"transport\": {\n    \"intended\": \"provider\",\n    \"client\": \"provider\"\n  },\n  \"ignoredMetadata\": \"JSON-RPC id and transport wrapper are not signed or compared\",\n  \"accountBinding\": \"compared separately; public account parameter is not part of the EIP-712 digest\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "rpc_request_check.py",
+        "zto-envelope.json",
+        "zto-envelope.json",
+        "--summary"
+      ],
+      "workingDirectory": "test/scratch/line4-round26/detached",
+      "exit": 0,
+      "stdout": "{\n  \"digestMatches\": true,\n  \"encodingMatches\": true,\n  \"intended\": {\n    \"primaryType\": \"PaymentEvidence\",\n    \"domainSeparator\": \"0xb841b9b4b38823bdf4340d649cbad52a49cb75b55ddd1f91b457246dcb4f807d\",\n    \"messageHash\": \"0xac6db73f194d768dad814f953bcc998a7338581d687e8a9107ca85ed94077599\",\n    \"digest\": \"0xf33e2506e5c103f98dbfe3feb6d4b87d55f1fad4e423dbaa8462465ff4ab9774\"\n  },\n  \"client\": {\n    \"primaryType\": \"PaymentEvidence\",\n    \"domainSeparator\": \"0xb841b9b4b38823bdf4340d649cbad52a49cb75b55ddd1f91b457246dcb4f807d\",\n    \"messageHash\": \"0xac6db73f194d768dad814f953bcc998a7338581d687e8a9107ca85ed94077599\",\n    \"digest\": \"0xf33e2506e5c103f98dbfe3feb6d4b87d55f1fad4e423dbaa8462465ff4ab9774\"\n  },\n  \"differenceCount\": 0,\n  \"intendedSource\": \"caller-supplied; not authenticated by this tool\",\n  \"typedDataMatches\": true,\n  \"accountMatches\": true,\n  \"accepted\": true,\n  \"intendedAccount\": \"0x2d30e495a15f2657d57c3e2caa08b06415c26cbf\",\n  \"clientAccount\": \"0x2d30e495a15f2657d57c3e2caa08b06415c26cbf\",\n  \"transport\": {\n    \"intended\": \"provider\",\n    \"client\": \"provider\"\n  },\n  \"ignoredMetadata\": \"JSON-RPC id and transport wrapper are not signed or compared\",\n  \"accountBinding\": \"compared separately; public account parameter is not part of the EIP-712 digest\"\n}\n"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "recordCount": 26,
+  "number": 26,
+  "wallDimensions": [
+    1254,
+    1254
+  ],
+  "wallFormat": "PNG RGB",
+  "previewDimensions": [
+    512,
+    512
+  ],
+  "previewFormat": "JPEG",
+  "goalUnchanged": true,
+  "olderTrackedFilesUnchanged": true,
+  "provenanceMatches": true,
+  "maxFileSizeOutsideArtifactsUnder100KB": true,
+  "outputsLeftUntracked": true,
+  "exactAncestorPreservationVerified": true,
+  "changedPixels": 4534
+}

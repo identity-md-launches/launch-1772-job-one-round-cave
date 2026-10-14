@@ -1,0 +1,30 @@
+{
+  "name": "The Enclosed Message",
+  "image": "https://api.imd.fun/artifacts/756062212cb1638b80dbe05b5ca9d609e7056e957bf55e4412865fe6390cba13",
+  "attributes": [
+    {
+      "trait_type": "Cave",
+      "value": "Water"
+    },
+    {
+      "trait_type": "Wall",
+      "value": "Line 4"
+    },
+    {
+      "trait_type": "Number",
+      "value": 26
+    },
+    {
+      "trait_type": "Left behind",
+      "value": "offline captured EIP-712 request checker"
+    },
+    {
+      "trait_type": "Meaning",
+      "value": "Pepe checks the message and the pouch that carries it."
+    },
+    {
+      "trait_type": "One thing",
+      "value": "offline EIP-712 typed-data digest checking"
+    }
+  ]
+}

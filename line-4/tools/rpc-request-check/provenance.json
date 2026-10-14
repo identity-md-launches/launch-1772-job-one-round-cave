@@ -1,0 +1,18 @@
+{
+  "typed_digest.py": {
+    "source": "line-4/tools/request-compare/typed_digest.py",
+    "sha256": "a6903cd67fd837f18be3546721830228646df5e144c04f7a5cbd40c5f21854d9"
+  },
+  "typed_trace.py": {
+    "source": "line-4/tools/request-compare/typed_trace.py",
+    "sha256": "5c31aee1c6c845e2624448938a586016dd6304f768b1f793852919ec907ca78d"
+  },
+  "request_compare.py": {
+    "source": "line-4/tools/request-compare/request_compare.py",
+    "sha256": "c9bae636437c25a66d8eb459cd3450d3a6ac5c12b458b97f06613bb594c8c71e"
+  },
+  "zto-intended.json": {
+    "source": "line-4/tools/request-compare/zto-intended.json",
+    "sha256": "2cf66267a37b24255fc5a7d2a24489ac5261cb247d4f18e2ef87f0e542d1ef54"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "wall": {
+    "paths": [
+      "artifacts/line-4/wall.png",
+      "artifacts/line-4/wall-v6.png"
+    ],
+    "width": 1254,
+    "height": 1254,
+    "format": "PNG",
+    "mode": "RGB",
+    "sha256": "756062212cb1638b80dbe05b5ca9d609e7056e957bf55e4412865fe6390cba13"
+  },
+  "preview": {
+    "path": "dist/line-4/26.jpg",
+    "width": 512,
+    "height": 512,
+    "format": "JPEG",
+    "bytes": 77775
+  },
+  "ancestorSha256": "36db5a46fd1287c78802711d85ae0ad37ff3ef63f61523e2c96c413c6534c8d4",
+  "generatedImageSha256": "9f652144be39680be57317028b02ad385d1a1106dba750bafa1b9e7e83eac179",
+  "changedPixels": 4534,
+  "unchangedPixels": 1567982,
+  "additionBounds": [
+    107,
+    839,
+    249,
+    990
+  ],
+  "preservation": "Only generated pigment on vacant lower-left rock. All pixels outside the addition, including every ancestor mark and Pepe, are identical. Deep cracks inside the addition are retained.",
+  "imageTool": "installed image generate_image",
+  "prompt": "A single small prehistoric ochre pouch enclosing a round red ochre pebble, drawn with rough charcoal outline and a simple charcoal tied neck. Centered isolated motif on warm brown rough cave stone, torchlight, worn uneven earthy pigment, Lascaux handmade cave painting. Simple sparse lines. Only earth pigments red and yellow ochre, charcoal black. No hands, no figures, no letters, numbers, writing, symbols, captions, signature, logos, watermark, borders. This motif represents inspecting a message enclosed in its envelope.",
+  "visualReview": "Inspected the finished full PNG and decoded 512-square JPEG. Recognizable Pepe retains his broad mouth and heavy-lidded eyes. Counted four fingers and one thumb on each of the two inherited hands. The new lower-left pouch adds no hands or handprints. Warm stone, cracks, torchlight, water, framing and all older paintings are preserved. No letters, numbers, captions, logos, signatures, watermarks, frames, real people or prohibited symbols observed. No known unmet visual requirements.",
+  "unmetVisualRequirements": [],
+  "limitations": [
+    "Local visual review is not independent certification.",
+    "The small worn motif is subtler in the 512-pixel preview."
+  ],
+  "reviewStep": "Local visual inspection using view_image on both final deliverables; not independent approval."
+}

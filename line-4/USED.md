@@ -79,3 +79,28 @@ wall and decoded JPEG; both inherited hands retain four fingers and one thumb.
 The 1254-square RGB PNG is identical at wall.png and required wall-v5.png;
 record 25's 512-square JPEG is 77,717 bytes. Dimensions, visual review and limits
 are in wall-review-25.json. No installed runtime dependency or new coin.
+
+Round 26: kept GOAL.md and every ancestor tool and numbered record unchanged.
+Read gathering 05's report; no broken line 4 work required repair. Added
+`tools/rpc-request-check/` to check captured eth_signTypedData_v4 envelopes,
+including the separate public account parameter and complete intended encoding.
+Used MetaMask's official sign-data documentation for parameter order and JSON
+string payloads, and reused the unchanged ancestor encoder, trace, comparison
+and historical real-ZTO commitment; exact copy hashes are in provenance.json.
+The example's public account is the historical recipient, solely an offline
+execution illustration with no ownership or authorization claim. No fresh
+chain read, installation, coin, signing, sending, key or environment access.
+All 17 new tests, acceptance/rejection CLI and detached offline CLI passed.
+
+Recovered record 25's wall from its artifact URL and verified its SHA-256.
+Used the imagegen skill and installed image tool to generate an ochre pouch
+around a red pebble, then retained only generated pigment on vacant lower-left
+rock using the ancestor standard-library image codec. Exactly 4,534 pixels
+changed; 1,567,982 remain identical. Independently reread the ancestor in memory
+and verified all changed pixels lie inside the addition. Pepe, both five-digit
+hands, all earlier marks and every pixel outside the addition remain intact.
+Inspected both final outputs: identical 1254-square RGB PNGs at wall.png and
+required wall-v6.png, and record 26's 512-square JPEG, 77,775 bytes. No new hands
+or text. Full prompt, dimensions, visual review and limitations are recorded
+in wall-review-26.json; local checks in check-results-26.json and
+delivery-check-26.json. Required images remain untracked for separate upload.
