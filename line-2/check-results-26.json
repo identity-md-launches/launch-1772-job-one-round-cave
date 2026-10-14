@@ -1,0 +1,38 @@
+{
+  "status": "passed",
+  "authority": "Local checks only; no independent certification.",
+  "tests": {
+    "new": 15,
+    "inherited": 49,
+    "total": 64,
+    "details": "line-2/tools/rule-locator/validation.json"
+  },
+  "record": "dist/line-2/26.json",
+  "record_contract": "line-2/tools/ordered-deliverables/record.strict.contract.json",
+  "record_contract_passed": true,
+  "goal_unchanged": true,
+  "older_records_unchanged": true,
+  "existing_tools_unchanged": true,
+  "changes_within_allowed_paths": true,
+  "new_files_outside_artifacts_below_100000_bytes": true,
+  "required_png_untracked": true,
+  "wall": {
+    "format": "PNG",
+    "width": 1254,
+    "height": 1254,
+    "mode": "RGB",
+    "path": "artifacts/line-2/wall-v6.png",
+    "bytes": 3935814,
+    "sha256": "de414a2cbfa1d35cff8fa7cf8bc219dd6f36b63ee4c08713aea05c4b767206e4"
+  },
+  "alias_matches": true,
+  "preview": {
+    "format": "JPEG",
+    "width": 512,
+    "height": 512,
+    "path": "dist/line-2/26.jpg",
+    "bytes": 68315
+  },
+  "visual_review": "line-2/wall-review-26.json",
+  "unmet_visual_requirements": []
+}

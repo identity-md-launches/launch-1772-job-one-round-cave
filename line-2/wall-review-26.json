@@ -1,0 +1,44 @@
+{
+  "name": "Trail to the Rule",
+  "number": 26,
+  "ancestor_sha256": "421c094aae160d13cb91cb49f7d56c261c751a7fc81df1b35a675f49cb8284a8",
+  "generated_edit_sha256": "cd3bf091deafa564cf9491058e056de98d5f775e009a05e5d1d343d62992e940",
+  "full_wall": {
+    "format": "PNG",
+    "mode": "RGB",
+    "width": 1254,
+    "height": 1254
+  },
+  "addition_region": {
+    "x": 520,
+    "y": 265,
+    "width": 215,
+    "height": 83
+  },
+  "changed_pixels": 2151,
+  "unchanged_pixels": 1570365,
+  "pigment_pixels": {
+    "ochre": 587,
+    "charcoal": 626,
+    "chalk": 938
+  },
+  "outside_region_pixel_identical": true,
+  "method": "Generated pigment selected by local color and luminance difference; composited over original stone. Deep dark cracks protected. All other pixels retained exactly.",
+  "visual_review": "Final full PNG and decoded 512-pixel JPEG visually inspected; no known unmet visual requirements.",
+  "unmet_visual_requirements": [],
+  "wall_paths": [
+    "artifacts/line-2/wall.png",
+    "artifacts/line-2/wall-v6.png"
+  ],
+  "sha256": "de414a2cbfa1d35cff8fa7cf8bc219dd6f36b63ee4c08713aea05c4b767206e4",
+  "preview": {
+    "path": "dist/line-2/26.jpg",
+    "format": "JPEG",
+    "width": 512,
+    "height": 512,
+    "bytes": 68315
+  },
+  "preserved": "All inherited Pepe figures and paintings lie outside the addition and remain pixel-identical; original rock texture, cracks, water, lighting, dimensions and framing retained.",
+  "hands": "No visible hands or handprints in the inherited wall or new mark; no digits to count.",
+  "prohibited_content": "No letters, numerals, captions, signatures, logos, watermarks, borders, real people or prohibited symbols observed. New pigment is a flat worn ochre dot, broken charcoal trail and chalk ring."
+}

@@ -1,0 +1,78 @@
+{
+  "status": "passed",
+  "authority": "Local observations only; not independent certification.",
+  "test_count": 64,
+  "checks": [
+    {
+      "command": [
+        "python3",
+        "-B",
+        "line-2/tools/json-contract/test_check.py"
+      ],
+      "exit": 0,
+      "tests": 10
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "line-2/tools/ordered-deliverables/test_ordered.py"
+      ],
+      "exit": 0,
+      "tests": 13
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "line-2/tools/bounded-contract/test_check.py"
+      ],
+      "exit": 0,
+      "tests": 14
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "line-2/tools/repair-review/test_review.py"
+      ],
+      "exit": 0,
+      "tests": 12
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "line-2/tools/rule-locator/test_explain.py"
+      ],
+      "exit": 0,
+      "tests": 15
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "line-2/tools/rule-locator/explain.py",
+        "shared/payment-evidence/policy.contract.json",
+        "shared/payment-evidence/example.policy.json"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "valid": true,
+      "error_count": 0
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "line-2/tools/rule-locator/explain.py",
+        "line-2/tools/json-contract/report.contract.json",
+        "line-2/tools/rule-locator/report.invalid.json"
+      ],
+      "exit": 1,
+      "expected_exit": 1,
+      "valid": false,
+      "error_count": 3
+    }
+  ]
+}

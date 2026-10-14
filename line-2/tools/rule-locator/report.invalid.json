@@ -1,0 +1,6 @@
+{
+  "task": "offline-build",
+  "status": "pass",
+  "checks": [{"name": "compile", "passed": "yes", "seconds": -1}],
+  "unexpected": null
+}

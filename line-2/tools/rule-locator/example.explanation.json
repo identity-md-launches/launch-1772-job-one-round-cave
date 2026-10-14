@@ -1,0 +1,62 @@
+{
+  "valid": false,
+  "error_count": 3,
+  "errors": [
+    {
+      "path": "/checks/0/passed",
+      "rule": "type",
+      "message": "expected boolean",
+      "contract_path": "/properties/checks/items/properties/passed/type",
+      "constraint": {
+        "present": true,
+        "type": "string",
+        "length": 7,
+        "preview": "\"boolean\"",
+        "truncated": false
+      },
+      "observed": {
+        "present": true,
+        "type": "string",
+        "length": 3,
+        "preview": "\"yes\"",
+        "truncated": false
+      }
+    },
+    {
+      "path": "/checks/0/seconds",
+      "rule": "minimum",
+      "message": "must respect minimum 0",
+      "contract_path": "/properties/checks/items/properties/seconds/minimum",
+      "constraint": {
+        "present": true,
+        "type": "integer",
+        "preview": "0",
+        "truncated": false
+      },
+      "observed": {
+        "present": true,
+        "type": "integer",
+        "preview": "-1",
+        "truncated": false
+      }
+    },
+    {
+      "path": "/unexpected",
+      "rule": "additionalProperties",
+      "message": "unexpected property",
+      "contract_path": "/additionalProperties",
+      "constraint": {
+        "present": true,
+        "type": "boolean",
+        "preview": "false",
+        "truncated": false
+      },
+      "observed": {
+        "present": true,
+        "type": "null",
+        "preview": "null",
+        "truncated": false
+      }
+    }
+  ]
+}

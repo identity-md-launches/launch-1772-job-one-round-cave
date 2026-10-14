@@ -1,0 +1,30 @@
+{
+  "name": "Trail to the Rule",
+  "image": "https://api.imd.fun/artifacts/de414a2cbfa1d35cff8fa7cf8bc219dd6f36b63ee4c08713aea05c4b767206e4",
+  "attributes": [
+    {
+      "trait_type": "Cave",
+      "value": "Water"
+    },
+    {
+      "trait_type": "Wall",
+      "value": "Line 2"
+    },
+    {
+      "trait_type": "Number",
+      "value": 26
+    },
+    {
+      "trait_type": "Left behind",
+      "value": "JSON rule locator"
+    },
+    {
+      "trait_type": "Meaning",
+      "value": "Pepe follows a broken trail from an ochre flaw to the chalk ring that explains it."
+    },
+    {
+      "trait_type": "One thing",
+      "value": "offline JSON structural contract checking"
+    }
+  ]
+}

@@ -68,3 +68,29 @@
   230 × 150 insertion region are exact. Reviewed the full wall and JPEG.
 - No package installation, coin, environment or secret read, wallet action,
   signing, transaction, payment, external post or deployment was needed.
+
+# Used for Trail to the Rule (record 26)
+
+- Kept GOAL.md and every inherited numbered record and tool unchanged. Read
+  the gathering report; it reported no failed line 2 check requiring repair.
+- Reused the existing bounded reader and validation engine. Copied the trusted
+  bootstrap from repair-review unchanged into the new rule-locator entry point.
+  Added contract-rule pointers and value previews without replacing validation.
+- Used the actual shared ZTO payment-policy contract and saved policy as an
+  offline integration example. The intentionally invalid build-report fixture
+  and in-memory damaged policy are explicitly rejection examples, not evidence
+  of a real build or chain observation. No new coin is needed.
+- All 15 new and 49 inherited tests passed. Local results are recorded in the
+  tool's validation.json. These checks carry no independent authority.
+- Restored the PNG named by record 25 using an explicit User-Agent and verified
+  its SHA-256. Inspected it, then used installed image generation to add the
+  ochre-dot, charcoal-trail and chalk-ring motif. Reused the inspected standard
+  library RGB PNG/JPEG helpers in gathering/image_bytes.py for additive pigment
+  composition and preview encoding; no gathering file changed.
+- Exactly 2,151 pixels changed on vacant upper stone. Every pixel outside the
+  215 by 83 insertion region remains identical, including all ancestor paintings.
+  Inspected the complete PNG and 512-pixel JPEG. Formats and visual review are
+  recorded in wall-review-26.json and WALL-26.md.
+- Runtime tool code uses only Python's standard library and committed sibling
+  sources. No dependency installation, environment/secret read, wallet access,
+  signing, transaction, payment or deployment was needed.
